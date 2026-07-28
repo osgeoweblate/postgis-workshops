@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Introduction to PostGIS 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-01-07 21:46-0500\n"
+"POT-Creation-Date: 2026-07-28 11:17+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,9 +25,9 @@ msgstr ""
 
 #: ../../en/joins_advanced.rst:6
 msgid ""
-"In the last section we saw the :command:`ST_PointOnSurface(geometry)` and :command:"
-"`ST_Union([geometry])` functions, and some simple examples. In this section "
-"we will do some more elaborate things with them."
+"In the last section we saw the :command:`ST_PointOnSurface(geometry)` "
+"and :command:`ST_Union([geometry])` functions, and some simple examples. In "
+"this section we will do some more elaborate things with them."
 msgstr ""
 
 #: ../../en/joins_advanced.rst:11 ../../en/joins_advanced.rst:31
@@ -73,8 +73,8 @@ msgstr ""
 
 #: ../../en/joins_advanced.rst:26
 msgid ""
-"Select **File->Open** from the menu and browse to the ``nyc_census_sociodata."
-"sql`` file"
+"Select **File->Open** from the menu and browse to the "
+"``nyc_census_sociodata.sql`` file"
 msgstr ""
 
 #: ../../en/joins_advanced.rst:27
@@ -139,10 +139,10 @@ msgstr ""
 
 #: ../../en/joins_advanced.rst:131
 msgid ""
-"In our interesting query (in :ref:`interestingquestion`) we used the :"
-"command:`ST_Intersects(geometry_a, geometry_b)` function to determine which "
-"census tract polygons to include in each neighborhood summary. Which leads "
-"to the question: what if a tract falls on the border between two "
+"In our interesting query (in :ref:`interestingquestion`) we used "
+"the :command:`ST_Intersects(geometry_a, geometry_b)` function to determine "
+"which census tract polygons to include in each neighborhood summary. Which "
+"leads to the question: what if a tract falls on the border between two "
 "neighborhoods? It will intersect both, and so will be included in the "
 "summary statistics for **both**."
 msgstr ""
@@ -159,8 +159,8 @@ msgstr ""
 
 #: ../../en/joins_advanced.rst:138
 msgid ""
-"The complex method is to divide crossing tracts at the borders (using :"
-"command:`ST_Intersection(geometry,geometry)`)"
+"The complex method is to divide crossing tracts at the borders "
+"(using :command:`ST_Intersection(geometry,geometry)`)"
 msgstr ""
 
 #: ../../en/joins_advanced.rst:140
@@ -171,8 +171,9 @@ msgstr ""
 
 #: ../../en/joins_advanced.rst:155
 msgid ""
-"Note that the query takes longer to run now, because the :command:"
-"`ST_PointOnSurface` function has to be run on every census tract."
+"Note that the query takes longer to run now, because "
+"the :command:`ST_PointOnSurface` function has to be run on every census "
+"tract."
 msgstr ""
 
 #: ../../en/joins_advanced.rst:172
