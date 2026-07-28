@@ -33,8 +33,8 @@ msgid ""
 "this section we will do some more elaborate things with them."
 msgstr ""
 "En la última sección vimos las "
-"funciones :command:`ST_PointOnSurface(geometría)` "
-"y :command:`ST_Union([geometría])`, y algunos ejemplos sencillos. En esta "
+"funciones :command:`ST_PointOnSurface(geometry)` "
+"y :command:`ST_Union([geometry])`, y algunos ejemplos sencillos. En esta "
 "sección haremos algunas cosas más elaboradas con ellas."
 
 #: ../../en/joins_advanced.rst:11 ../../en/joins_advanced.rst:31
