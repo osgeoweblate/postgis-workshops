@@ -157,10 +157,21 @@ html_context = {'subheading': 'PostGIS extends PostgreSQL with robust spatial da
 # The font size ('10pt', '11pt' or '12pt').
 #latex_font_size = '11pt'
 
+if os.environ.get('LANG') == 'ko':
+  latex_engine = 'xelatex'
+
+
 latex_elements = {
   'papersize':'a4paper',
   'pointsize':'11pt'
 }
+
+if os.environ.get('LANG') == 'ko':
+  latex_elements['fontpkg'] = r'''
+\setmainfont{Noto Serif CJK KR}
+\setsansfont{Noto Sans CJK KR}
+\setmonofont{Noto Sans Mono CJK KR}[Scale=0.9]
+'''
 
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, document class [howto/manual]).
