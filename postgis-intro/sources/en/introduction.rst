@@ -153,8 +153,6 @@ Recent releases of PostGIS continue to add features and performance improvements
 Who uses PostGIS?
 -----------------
 
-For a complete list of case studies, see the `PostGIS case studies <https://postgis.net/category/casestudy/>`_ page.
-
 Institut Geographique National, France
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -209,4 +207,3 @@ The following table shows a list of some of the software that leverages PostGIS:
 |   * SAGA                                        |   * MapInfo                                  |
 |   * uDig                                        |   * Microimages TNTmips GIS                  |
 +-------------------------------------------------+----------------------------------------------+
-
