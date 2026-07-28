@@ -23,9 +23,9 @@ msgid "More Spatial Joins"
 msgstr "Fler spatiala sammanfogningar"
 
 #: ../../en/joins_advanced.rst:6
-msgid "In the last section we saw the :command:`ST_Centroid(geometry)` and :command:`ST_Union([geometry])` functions, and some simple examples. In this section we will do some more elaborate things with them."
+msgid "In the last section we saw the :command:`ST_PointOnSurface(geometry)` and :command:`ST_Union([geometry])` functions, and some simple examples. In this section we will do some more elaborate things with them."
 msgstr ""
-"I förra avsnittet såg vi funktionerna :command:`ST_Centroid(geometry)` och "
+"I förra avsnittet såg vi funktionerna :command:`ST_PointOnSurface(geometry)` och "
 ":command:`ST_Union([geometry])`, och några enkla exempel. I det här "
 "avsnittet ska vi göra lite mer avancerade saker med dem."
 
@@ -151,10 +151,10 @@ msgid "To avoid this kind of double counting there are two methods:"
 msgstr "För att undvika denna typ av dubbelräkning finns det två metoder:"
 
 #: ../../en/joins_advanced.rst:137
-msgid "The simple method is to ensure that each tract only falls in **one** summary area (using :command:`ST_Centroid(geometry)`)"
+msgid "The simple method is to ensure that each tract only falls in **one** summary area (using :command:`ST_PointOnSurface(geometry)`)"
 msgstr ""
 "Den enkla metoden är att se till att varje trakt bara faller inom **ett** "
-"sammanfattningsområde (med hjälp av :command:`ST_Centroid(geometry)`)"
+"sammanfattningsområde (med hjälp av :command:`ST_PointOnSurface(geometry)`)"
 
 #: ../../en/joins_advanced.rst:138
 msgid "The complex method is to divide crossing tracts at the borders (using :command:`ST_Intersection(geometry,geometry)`)"
@@ -169,10 +169,10 @@ msgstr ""
 "dubbelräkning i vår fråga om forskarutbildning:"
 
 #: ../../en/joins_advanced.rst:155
-msgid "Note that the query takes longer to run now, because the :command:`ST_Centroid` function  has to be run on every census tract."
+msgid "Note that the query takes longer to run now, because the :command:`ST_PointOnSurface` function has to be run on every census tract."
 msgstr ""
 "Observera att det tar längre tid att köra frågan nu, eftersom funktionen "
-":command:`ST_Centroid` måste köras på varje folkräkningstrakt."
+":command:`ST_PointOnSurface` måste köras på varje folkräkningstrakt."
 
 #: ../../en/joins_advanced.rst:172
 msgid "Avoiding double counting changes the results!"

@@ -3,7 +3,7 @@
 第19章: 高度な空間結合
 ==============================
 
-１つ前の章において :command:`ST_Centroid(geometry)` 関数と :command:`ST_Union([geometry])` 関数、そして簡単な実用例を扱いました。このセクションでは、これらの関数を使い、より複雑な処理を行います。
+１つ前の章において :command:`ST_PointOnSurface(geometry)` 関数と :command:`ST_Union([geometry])` 関数、そして簡単な実用例を扱いました。このセクションでは、これらの関数を使い、より複雑な処理を行います。
 
 .. _creatingtractstable:
 
@@ -133,7 +133,7 @@
 
 重複して計数されるこの種の問題を避けるために、２つの対処方法があります。
 
- * 簡便な方法として、各国勢統計区が一つの集計区域に重なっていることを確認する方法（ :command:`ST_Centroid(geometry)` を使います）。
+ * 簡便な方法として、各国勢統計区が一つの集計区域に重なっていることを確認する方法（ :command:`ST_PointOnSurface(geometry)` を使います）。
  * 高度な方法として、境界線をまたぐ国勢統計区をその位置で分割する方法（ :command:`ST_Intersection(geometry,geometry)` を使います。
 
 以下に簡便な方法を使い、大学院教育に関するクエリで重複して計数されないようにする例を示します。
@@ -145,13 +145,13 @@
     n.name, n.boroname 
   FROM nyc_neighborhoods n 
   JOIN nyc_census_tracts t 
-  ON ST_Contains(n.the_geom, ST_Centroid(t.the_geom)) 
+  ON ST_Contains(n.the_geom, ST_PointOnSurface(t.the_geom))
   WHERE t.edu_total > 0
   GROUP BY n.name, n.boroname
   ORDER BY graduate_pct DESC
   LIMIT 10;
 
-このクエリは、 :command:`ST_Centroid` 関数が各国勢統計区に対して処理を実行するため、処理により多くの時間が必要になります。
+このクエリは、 :command:`ST_PointOnSurface` 関数が各国勢統計区に対して処理を実行するため、処理により多くの時間が必要になります。
 
 ::
 
@@ -225,8 +225,6 @@
   4953599
 
 よりよい答えが得られました。半数より少し多くの人が地下鉄から500メートル以内（徒歩5分から7分）にいることがわかりました。
-
-
 
 
 

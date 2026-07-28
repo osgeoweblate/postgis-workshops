@@ -25,7 +25,7 @@ msgstr ""
 
 #: ../../en/joins_advanced.rst:6
 msgid ""
-"In the last section we saw the :command:`ST_Centroid(geometry)` and :command:"
+"In the last section we saw the :command:`ST_PointOnSurface(geometry)` and :command:"
 "`ST_Union([geometry])` functions, and some simple examples. In this section "
 "we will do some more elaborate things with them."
 msgstr ""
@@ -154,7 +154,7 @@ msgstr ""
 #: ../../en/joins_advanced.rst:137
 msgid ""
 "The simple method is to ensure that each tract only falls in **one** summary "
-"area (using :command:`ST_Centroid(geometry)`)"
+"area (using :command:`ST_PointOnSurface(geometry)`)"
 msgstr ""
 
 #: ../../en/joins_advanced.rst:138
@@ -172,7 +172,7 @@ msgstr ""
 #: ../../en/joins_advanced.rst:155
 msgid ""
 "Note that the query takes longer to run now, because the :command:"
-"`ST_Centroid` function  has to be run on every census tract."
+"`ST_PointOnSurface` function has to be run on every census tract."
 msgstr ""
 
 #: ../../en/joins_advanced.rst:172
