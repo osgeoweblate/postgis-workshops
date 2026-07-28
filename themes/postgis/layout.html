@@ -34,6 +34,8 @@
 {%- endmacro %}
 
 {% block extrahead %}
+    {{ super() }}
+    <link rel="icon" href="{{ pathto('_static/favicon.ico', 1) }}" />
     {% if pagename == "index" %}
     {% endif %}
 {% endblock %}
