@@ -79,6 +79,11 @@ sudo apt install texlive-lang-japanese
 make pdf #builds just english
 #if you get errors about cmap.sty missing try doing:
 sudo apt install texlive-fonts-recommended texlive-latex-recommended texlive-latex-extra
+
+# to build Chinese, Japanese, and Korean translated PDFs, install latexmk,
+# xindy, FreeFont, and the CJK language collections used by the generated
+# Sphinx LaTeX sources:
+sudo apt install latexmk xindy fonts-freefont-otf texlive-lang-chinese texlive-lang-japanese texlive-lang-korean
 ```
 
 ### Slide Decks
