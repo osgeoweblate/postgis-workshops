@@ -3,7 +3,7 @@
 More Spatial Joins
 ==================
 
-In the last section we saw the :command:`ST_Centroid(geometry)` and :command:`ST_Union([geometry])` functions, and some simple examples. In this section we will do some more elaborate things with them.
+In the last section we saw the :command:`ST_PointOnSurface(geometry)` and :command:`ST_Union([geometry])` functions, and some simple examples. In this section we will do some more elaborate things with them.
 
 .. _creatingtractstable:
 
@@ -134,7 +134,7 @@ In our interesting query (in :ref:`interestingquestion`) we used the :command:`S
 
 To avoid this kind of double counting there are two methods:
 
-* The simple method is to ensure that each tract only falls in **one** summary area (using :command:`ST_Centroid(geometry)`)
+* The simple method is to ensure that each tract only falls in **one** summary area (using :command:`ST_PointOnSurface(geometry)`)
 * The complex method is to divide crossing tracts at the borders (using :command:`ST_Intersection(geometry,geometry)`)
  
 Here is an example of using the simple method to avoid double counting in our graduate education query:
@@ -146,13 +146,13 @@ Here is an example of using the simple method to avoid double counting in our gr
     n.name, n.boroname 
   FROM nyc_neighborhoods n 
   JOIN nyc_census_tracts t 
-  ON ST_Contains(n.geom, ST_Centroid(t.geom)) 
+  ON ST_Contains(n.geom, ST_PointOnSurface(t.geom))
   WHERE t.edu_total > 0
   GROUP BY n.name, n.boroname
   ORDER BY graduate_pct DESC
   LIMIT 10;
   
-Note that the query takes longer to run now, because the :command:`ST_Centroid` function  has to be run on every census tract.
+Note that the query takes longer to run now, because the :command:`ST_PointOnSurface` function has to be run on every census tract.
 
 ::
 
@@ -233,6 +233,4 @@ The solution is to ensure that we have only distinct census blocks before passin
   5005743
 
 That's better! So a bit over half the population of New York is within 500m (about a 5-7 minute walk) of the subway.
-
-
 

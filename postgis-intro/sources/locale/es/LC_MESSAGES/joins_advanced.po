@@ -28,11 +28,11 @@ msgstr "Más Joins Espaciales"
 
 #: ../../en/joins_advanced.rst:6
 msgid ""
-"In the last section we saw the :command:`ST_Centroid(geometry)` and :command:"
+"In the last section we saw the :command:`ST_PointOnSurface(geometry)` and :command:"
 "`ST_Union([geometry])` functions, and some simple examples. In this section "
 "we will do some more elaborate things with them."
 msgstr ""
-"En la última sección vimos las funciones :command:`ST_Centroid(geometría)` y "
+"En la última sección vimos las funciones :command:`ST_PointOnSurface(geometría)` y "
 ":command:`ST_Union([geometría])`, y algunos ejemplos sencillos. En esta "
 "sección haremos algunas cosas más elaboradas con ellas."
 
@@ -191,10 +191,10 @@ msgstr "Para evitar este tipo de doble conteo hay dos métodos:"
 #: ../../en/joins_advanced.rst:137
 msgid ""
 "The simple method is to ensure that each tract only falls in **one** summary "
-"area (using :command:`ST_Centroid(geometry)`)"
+"area (using :command:`ST_PointOnSurface(geometry)`)"
 msgstr ""
 "El método simple es asegurar que cada distrito solo caiga en **una** área de "
-"resumen (usando :command:`ST_Centroid(geometry)`)"
+"resumen (usando :command:`ST_PointOnSurface(geometry)`)"
 
 #: ../../en/joins_advanced.rst:138
 msgid ""
@@ -215,10 +215,10 @@ msgstr ""
 #: ../../en/joins_advanced.rst:155
 msgid ""
 "Note that the query takes longer to run now, because the :command:"
-"`ST_Centroid` function  has to be run on every census tract."
+"`ST_PointOnSurface` function has to be run on every census tract."
 msgstr ""
 "Observa que la consulta tarda más en ejecutarse ahora, porque la función "
-":command:`ST_Centroid` debe ejecutarse en cada distrito censal."
+":command:`ST_PointOnSurface` debe ejecutarse en cada distrito censal."
 
 #: ../../en/joins_advanced.rst:172
 msgid "Avoiding double counting changes the results!"

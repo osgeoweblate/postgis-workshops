@@ -27,11 +27,11 @@ msgstr "その他の空間結合"
 
 #: ../../en/joins_advanced.rst:6
 msgid ""
-"In the last section we saw the :command:`ST_Centroid(geometry)` and :command:"
+"In the last section we saw the :command:`ST_PointOnSurface(geometry)` and :command:"
 "`ST_Union([geometry])` functions, and some simple examples. In this section "
 "we will do some more elaborate things with them."
 msgstr ""
-"前のセクションで、:command:`ST_Centroid(geometry)` 関数と "
+"前のセクションで、:command:`ST_PointOnSurface(geometry)` 関数と "
 ":command:`ST_Union([geometry])` "
 "関数と、簡単な例を見ました。このセクションでは、より複雑なことを行います。"
 
@@ -181,10 +181,10 @@ msgstr "この種の二重カウントを避けるには二つの方法があり
 #: ../../en/joins_advanced.rst:137
 msgid ""
 "The simple method is to ensure that each tract only falls in **one** summary "
-"area (using :command:`ST_Centroid(geometry)`)"
+"area (using :command:`ST_PointOnSurface(geometry)`)"
 msgstr ""
 "単純な方法として、それぞれの統計区を**一つの**"
-"集約領域だけに収まるようにします (:command:`ST_Centroid(geometry)` "
+"集約領域だけに収まるようにします (:command:`ST_PointOnSurface(geometry)` "
 "を使います)"
 
 #: ../../en/joins_advanced.rst:138
@@ -204,9 +204,9 @@ msgstr "大学院教育のクエリで二重カウントを回避する単純な
 #: ../../en/joins_advanced.rst:155
 msgid ""
 "Note that the query takes longer to run now, because the :command:"
-"`ST_Centroid` function  has to be run on every census tract."
+"`ST_PointOnSurface` function has to be run on every census tract."
 msgstr ""
-"このクエリは時間がかかります。というのも、:command:`ST_Centroid` "
+"このクエリは時間がかかります。というのも、:command:`ST_PointOnSurface` "
 "関数を全ての統計区について実行しなければならないからです。"
 
 #: ../../en/joins_advanced.rst:172
