@@ -55,12 +55,11 @@ Exercises
      
   .. code-block:: sql
 
-    SELECT name, boroname 
-    FROM nyc_neighborhoods 
-    WHERE ST_Intersects(
-      geom,
-      ST_GeomFromText('LINESTRING(586782 4504202,586864 4504216)', 26918)
-    );
+    SELECT n.name, n.boroname
+    FROM nyc_neighborhoods AS n
+    JOIN nyc_streets AS s
+      ON ST_Intersects(n.geom, s.geom)
+    WHERE s.name = 'Atlantic Commons';
 
   ::
      
@@ -79,13 +78,12 @@ Exercises
  
   .. code-block:: sql
 
-    SELECT name 
-    FROM nyc_streets 
-    WHERE ST_DWithin(
-      geom, 
-      (SELECT geom FROM nyc_streets WHERE name = 'Atlantic Commons'),
-      0.1
-    );
+    SELECT s.name
+    FROM nyc_streets AS s
+    JOIN nyc_streets AS ac
+      ON ST_DWithin(s.geom, ac.geom, 0.1)
+    WHERE ac.name = 'Atlantic Commons'
+      AND s.gid <> ac.gid;
     
   ::
   
@@ -93,7 +91,6 @@ Exercises
       ------------------
        S Oxford St
        Cumberland St
-       Atlantic Commons
 
   .. image:: ./spatial_relationships/atlantic_commons.jpg
   
