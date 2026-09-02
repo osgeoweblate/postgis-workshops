@@ -8,36 +8,41 @@ msgstr ""
 "Project-Id-Version: Introduction to PostGIS 1.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-06-10 18:57+0000\n"
-"PO-Revision-Date: 2025-07-01 01:16+0000\n"
+"PO-Revision-Date: 2026-09-02 09:39+0000\n"
 "Last-Translator: Teramoto Ikuhiro <teramoto.ikuhiro576@naro.go.jp>\n"
-"Language-Team: Japanese <https://weblate.osgeo.org/projects/postgis-workshop/topology_topo_types/ja/>\n"
+"Language-Team: Japanese <https://weblate.osgeo.org/projects/postgis-workshop/"
+"topology_topo_types/ja/>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.4.3\n"
+"X-Generator: Weblate 5.16.2\n"
 
 #: ../../en/topology_topo_types.rst:4
 msgid "Topology and Geometry Representation"
-msgstr ""
+msgstr "トポロジーとジオメトリーの表現"
 
 #: ../../en/topology_topo_types.rst:6
 msgid ""
 "Before reading this document, please review at least one of these resources:"
-msgstr ""
+msgstr "この文書を読む前に少なくとも次の資料を確認して下さい:"
 
 #: ../../en/topology_topo_types.rst:8
 msgid ""
 "`Topology Basic Types <https://postgis.net/workshops/en/postgis-"
 "intro/topology_base_types.html>`_"
 msgstr ""
+"`トポロジー基本タイプ <https://postgis.net/workshops/ja/postgis-intro/"
+"topology_base_types.html>`_"
 
 #: ../../en/topology_topo_types.rst:9
 msgid ""
 "`Introductory workshop: PostGIS Topology Workshop "
 "<https://postgis.net/workshops/en/postgis-intro/topology.html>`_"
 msgstr ""
+"`PostGIS 入門: トポロジー <https://postgis.net/workshops/en/postgis-intro/"
+"topology.html>`_"
 
 #: ../../en/topology_topo_types.rst:11
 msgid ""
@@ -45,10 +50,13 @@ msgid ""
 "practical, we need a way to represent these elements in a table. Similar to "
 "how we have spatial tables, we can have topology tables."
 msgstr ""
+"トポロジーを全てプリミティブで持つのは有用ですが、より実践的にするには、これ"
+"らのプリミティブ要素をテーブル内で表現する必要があります。空間テーブルを持つ"
+"ようにトポロジーテーブルを持つことができます。"
 
 #: ../../en/topology_topo_types.rst:14
 msgid "Introduction to geometry representation"
-msgstr ""
+msgstr "ジオメトリー表現入門"
 
 #: ../../en/topology_topo_types.rst:16
 msgid ""
@@ -58,66 +66,79 @@ msgid ""
 "TopoGeometry is able to represent one or several Primitives contained on the"
 " Topology."
 msgstr ""
+"ジオメトリーを表現するためのトポロジー使用例をご覧になったことがあるなら、覚"
+"えているかと思いますが、トポロジーテーブルにジオメトリーから投入する時、"
+"ジオメトリーの代わりにトポジオメトリーを使います。何らかの形で"
+"トポジオメトリーはトポロジーに含まれるプリミティブを表現することができます。"
 
 #: ../../en/topology_topo_types.rst:21
 msgid ""
 "The point is how we reach the actual primitives from the TopoGeometry, how "
 "the data is structured, so first lets see the most global definitions:"
 msgstr ""
+"TopoGeometry からどのように実際のプリミティブに到達するか、データがどのような"
+"構造になっているかが重要です。最初に最も総括的な定義を見てみましょう:"
 
 #: ../../en/topology_topo_types.rst:26
 msgid ""
 "A TopoGeometry can represent a group of Primitives or other TopoGeometries, "
 "in order to create a TopoGeometry you need a Layer."
 msgstr ""
+"トポロジーはプリミティブまたは他のトポジオメトリーの集団を表現できます。"
+"トポジオメトリーを生成するにはレイヤーが必要です。"
 
 #: ../../en/topology_topo_types.rst:28
 msgid ""
 "Layers are the biggest box, they store TopoGeometries which also stores "
 "TopoElements, this last ones represents Primitives or other TopoGeometries."
 msgstr ""
+"レイヤーは最も大きな箱で、レイヤーはトポジオメトリーを格納していて、"
+"トポジオメトリーはトポエレメントを格納していて、最後のトポエレメントは"
+"プリミティブまたは他のトポジオメトリーを表現しています。"
 
 #: ../../en/topology_topo_types.rst:31
 msgid "Just to write in two ways:"
-msgstr ""
+msgstr "別の言い方をすると:"
 
 #: ../../en/topology_topo_types.rst:33
 msgid "Layer contains"
-msgstr ""
+msgstr "レイヤーはトポロジーを含みます。"
 
 #: ../../en/topology_topo_types.rst:35
 msgid ""
 "TopoGeometries where all of them has the same TopoElement's type, each one "
 "one contains:"
 msgstr ""
+"トポエレメントのタイプが全て同じになるトポジオメトリー。トポエレメントは次の"
+"ものを含みます:"
 
 #: ../../en/topology_topo_types.rst:37
 msgid "TopoElements where each one can represent a:"
-msgstr ""
+msgstr "次の通り表現できるトポエレメント:"
 
 #: ../../en/topology_topo_types.rst:39
 msgid "TopoGeometry of other Layer"
-msgstr ""
+msgstr "他のレイヤーのトポエレメント"
 
 #: ../../en/topology_topo_types.rst:40
 msgid "Geometry Collection"
-msgstr ""
+msgstr "ジオメトリーコレクション"
 
 #: ../../en/topology_topo_types.rst:41
 msgid "Primitive from the Topology"
-msgstr ""
+msgstr "トポロジーからのプリミティブ"
 
 #: ../../en/topology_topo_types.rst:43 ../../en/topology_topo_types.rst:62
 msgid "Nodes"
-msgstr ""
+msgstr "ノード"
 
 #: ../../en/topology_topo_types.rst:44 ../../en/topology_topo_types.rst:63
 msgid "Edges"
-msgstr ""
+msgstr "エッジ"
 
 #: ../../en/topology_topo_types.rst:45 ../../en/topology_topo_types.rst:64
 msgid "Faces"
-msgstr ""
+msgstr "フェイス"
 
 #: ../../en/topology_topo_types.rst:47
 msgid ""
@@ -126,18 +147,26 @@ msgid ""
 "arbitrary column and always be able to find its TopoElements, and with them "
 "what they represent."
 msgstr ""
+"トポジオメトリーはキーとして示されます。このキーはレイヤー内部で一意です。ま"
+"た、レイヤーキーも保存されています。これにより、PostGIS は任意のカラムに"
+"トポジオメトリーを保存でき、常にトポエレメントの検索ができ、その"
+"トポエレメントが何を表しているかを知ることができます。"
 
 #: ../../en/topology_topo_types.rst:49
 msgid ""
 "You need a Layer where a TopoGeometry will be constructed, and after that "
 "you don't need to remember to which Layer it belongs."
 msgstr ""
+"トポジオメトリーが構築されるレイヤーが必要です。どのレイヤーに属しているかは"
+"覚えておく必要はありません。"
 
 #: ../../en/topology_topo_types.rst:51
 msgid ""
 "This concept is the one used for the user, from this point we will explain "
 "deep and technical details."
 msgstr ""
+"この概念はユーザーが使うものです。ここからは深く技術的な詳細情報を説明してい"
+"きます。"
 
 #: ../../en/topology_topo_types.rst:53
 msgid ""
@@ -146,10 +175,13 @@ msgid ""
 "of reduntant information, do not be supreised if you find the same "
 "information in two or more places."
 msgstr ""
+"参考までに、PostGIS トポロジーのキーについては内部に工夫があり、多数の部分を"
+"最適化するのを補助しますが、同時に多数の重複情報が現れます。同じ情報が 2か所"
+"以上で出現しても驚いてはいけません。"
 
 #: ../../en/topology_topo_types.rst:56
 msgid "Features"
-msgstr ""
+msgstr "地物"
 
 #: ../../en/topology_topo_types.rst:58
 msgid ""
@@ -158,6 +190,10 @@ msgid ""
 "TopoElements, if we follow its path we will always ends in Primitives of the"
 " Topology."
 msgstr ""
+"トポエレメントはトポジオメトリーとプリミティブを表現できます。"
+"トポジオメトリーについて考えてみます。トポジオメトリーがトポエレメント内に格"
+"納されても、そのトポジオメトリーは他のトポエレメントを含んでいます。この包含"
+"関係を追うと、常にトポロジーのプリミティブにたどり着きます。"
 
 #: ../../en/topology_topo_types.rst:60
 msgid ""
@@ -165,26 +201,33 @@ msgid ""
 "important if you use TopoGeometries or Primitives, in the end a Layer can "
 "contain directly or indirectly any of this sets:"
 msgstr ""
+"地物はジオメトリーの集合がどのタイプかを表現します。TopoGeometry か"
+"プリミティブを使う場合には重要ではありません。最終的にレイヤーは直接間接問わ"
+"ず次に示すものの集合を含みます:"
 
 #: ../../en/topology_topo_types.rst:65
 msgid "Geometry Collections"
-msgstr ""
+msgstr "ジオメトリーコレクション"
 
 #: ../../en/topology_topo_types.rst:67
 msgid ""
 "The numbers are important, in any function which requests the Feature Type, "
 "you can specify it using the number or the name as string."
 msgstr ""
+"地物タイプを要する関数では数字は重要です。ユーザーは数字または名前文字列を使"
+"って特定できます。"
 
 #: ../../en/topology_topo_types.rst:70
 msgid "Hierarchical Layers, Childs and Parents"
-msgstr ""
+msgstr "階層レイヤー、子と親"
 
 #: ../../en/topology_topo_types.rst:72
 msgid ""
 "I would like to introduce this concept later, but to explain better and "
 "deeper the concept you will find this is needed."
 msgstr ""
+"この概念は後程説明したいと思いますが、より良くより深くこの概念を説明するには"
+"、次のことを知る必要があります。"
 
 #: ../../en/topology_topo_types.rst:77
 msgid ""
@@ -192,24 +235,29 @@ msgid ""
 "Primitives, Layer 1 will have TopoGeometries where its TopoElements only "
 "make a reference to Primitives of the topology."
 msgstr ""
+"上の画像の最初の部分はプリミティブで構築されています。レイヤー 1は"
+"トポジオメトリーを持っていて、トポエレメントはトポロジーのプリミティブだけを"
+"参照します。"
 
 #: ../../en/topology_topo_types.rst:79
 msgid "We define the relationship between Layer 1 and Primitives as:"
-msgstr ""
+msgstr "レイヤー 1とプリミティブとのリレーションについて次のように定義します:"
 
 #: ../../en/topology_topo_types.rst:81
 msgid "Layer 1 is Parent of the Primitives"
-msgstr ""
+msgstr "レイヤー 1はプリミティブの親"
 
 #: ../../en/topology_topo_types.rst:82
 msgid "Primitives are Childs of the Layer 1"
-msgstr ""
+msgstr "プリミティブはレイヤー 1の子"
 
 #: ../../en/topology_topo_types.rst:84
 msgid ""
 "The relation between Parent and Child is about the size, Childs are small, "
 "when we have a group of them we build a Parent, a bigger group."
 msgstr ""
+"親と子のリレーションはサイズで言うと、子は小さく、子の集団から親を作ると大き"
+"な集団になります。"
 
 #: ../../en/topology_topo_types.rst:86
 msgid ""
@@ -217,6 +265,9 @@ msgid ""
 "layer, can make a reference to one or multiple TopoGeometries of the Layer "
 "1."
 msgstr ""
+"レイヤー 2はレイヤー 1を子として持ちます。これは、レイヤー 2の"
+"トポジオメトリーがレイヤー 1の 1個以上のトポジオメトリーを参照することを意味"
+"します。"
 
 #: ../../en/topology_topo_types.rst:88
 msgid ""
@@ -225,12 +276,18 @@ msgid ""
 "TopoGeometry, which in this case belongs to the Primitives (its Child), if "
 "you really need that then build Layer 2 using Layer 1 childs (Primitives)."
 msgstr ""
+"このことはまた、レイヤー 1のトポジオメトリーの一部使用ができないことを意味し"
+"ます。ここでいう一部使用とは、トポジオメトリーが持っていてプリミティブ "
+"(レイヤー 1の子) に属しているトポエレメントを 1個参照することです。本当に必要"
+"ならレイヤー 1の子 (プリミティブ) を使ってレイヤー 2を構築します。"
 
 #: ../../en/topology_topo_types.rst:90
 msgid ""
 "Each Layer can only have one Child Layer, this means, the Child and Parent "
 "share the same Topology schema."
 msgstr ""
+"各レイヤーは一つだけ子レイヤーを持つことができます。つまり、子と親は同じ"
+"トポロジースキーマに属します。"
 
 #: ../../en/topology_topo_types.rst:92
 msgid ""
@@ -238,10 +295,13 @@ msgid ""
 "something like half TopoGeometry or mixing Layers, but right now is not "
 "implemented."
 msgstr ""
+"階層のあり方について、トポロジオメトリーの一部や複数レイヤー混在などに対応す"
+"るための変更の可能性があることに気付くでしょうが、今のところは実装していませ"
+"ん。"
 
 #: ../../en/topology_topo_types.rst:95
 msgid "Layers"
-msgstr ""
+msgstr "レイヤー"
 
 #: ../../en/topology_topo_types.rst:97
 msgid ""
@@ -249,34 +309,43 @@ msgid ""
 "TopoGeometrie's Column, we also create a Layer, this is why we use a special"
 " function to create a column for this."
 msgstr ""
+"トポジオメトリーを格納するためにはレイヤーが必要です。よって"
+"トポジオメトリーカラムを生成する時、レイヤーも生成します。"
+"トポジオメトリーカラムを生成するのに特別な関数を使うのはこのためです。"
 
 #: ../../en/topology_topo_types.rst:99
 msgid ""
 "`Crete TopoGeometry Column "
 "<https://postgis.net/docs/AddTopoGeometryColumn.html>`_"
 msgstr ""
+"`トポジオメトリーカラムを生成する <https://postgis.net/docs/ja/"
+"AddTopoGeometryColumn.html>`_"
 
 #: ../../en/topology_topo_types.rst:101
 msgid ""
 "Layers and TopoGeometry Columns have a special relationship, they are "
 "linked, but they are not the same."
 msgstr ""
+"レイヤーとトポジオメトリーカラムは特別な関係を持ちます。これらは関連付けられ"
+"ますが同一にはなりません。"
 
 #: ../../en/topology_topo_types.rst:103
 msgid ""
 "Layers have a lot of information that we must provide to know which type of "
 "Layer we want."
 msgstr ""
+"レイヤーには、欲しいレイヤーのタイプを知るために提供しなければならない情報が"
+"多数あります。"
 
 #: ../../en/topology_topo_types.rst:105
 msgid ""
 "Layers have a unique identifier in each topology, this identifier is called "
 "layer_id."
-msgstr ""
+msgstr "レイヤーには、layer_id という名前の識別子があり、トポロジーごとに一意です。"
 
 #: ../../en/topology_topo_types.rst:107
 msgid "Layers Key: Composed Key with [topology_id, layer_id]"
-msgstr ""
+msgstr "レイヤーキー: [topology_id, layer_id] からなる複合キー"
 
 #: ../../en/topology_topo_types.rst:108
 msgid ""
@@ -286,7 +355,7 @@ msgstr ""
 
 #: ../../en/topology_topo_types.rst:109
 msgid "Feature Type: Feature type the layer will contain."
-msgstr ""
+msgstr "地物タイプ: レイヤーが持つ地物のタイプ。"
 
 #: ../../en/topology_topo_types.rst:110
 msgid ""
@@ -295,6 +364,9 @@ msgid ""
 "Primitives, if the value is 0 means the Layer is constructed using "
 "Primitives instead of TopoGeometries."
 msgstr ""
+"レベル: 0始まりで、このレイヤーを他のレイヤーを使って構築したら 1を加算してい"
+"き、プリミティブからどれだけのレイヤーを経由したかを示します。値が 0の場合に"
+"は、レイヤーはトポジオメトリーでなくプリミティブを使って構築しています。"
 
 #: ../../en/topology_topo_types.rst:111
 msgid ""
@@ -302,10 +374,13 @@ msgid ""
 "Layer as base, we need the Layer Identifier (layer_id) of this layer, we do "
 "not need topology_id because we already know it from the parent."
 msgstr ""
+"child_id:プリミティブを使わずに他のレイヤーを基礎にレイヤーが構築された場合、"
+"そのレイヤーの識別子 (layer_id) が必要ですが、既に親から得ているので "
+"topology_id は必要ではありません。"
 
 #: ../../en/topology_topo_types.rst:114
 msgid "Relation's Table"
-msgstr ""
+msgstr "リレーションテーブル"
 
 #: ../../en/topology_topo_types.rst:116
 msgid ""
@@ -317,15 +392,15 @@ msgstr ""
 msgid ""
 "The Relation's table function is be the bridge between the Parent and "
 "Childs."
-msgstr ""
+msgstr "リレーションテーブルは親と子の橋渡しです。"
 
 #: ../../en/topology_topo_types.rst:120
 msgid "This table can be found in: ``my_topology.relation``."
-msgstr ""
+msgstr "テーブルは次のようになっています: ``my_topology.relation``."
 
 #: ../../en/topology_topo_types.rst:123
 msgid "Keys and Identifiers we know now"
-msgstr ""
+msgstr "現在知っているキーと識別子"
 
 #: ../../en/topology_topo_types.rst:125
 msgid ""
@@ -334,6 +409,9 @@ msgid ""
 "unique in its topology context, but is not enough to find a layer in a "
 "database."
 msgstr ""
+"特定の文脈では「識別子」という言葉を一意のキーとして使用します。レイヤーは識"
+"別のための番号を持っています (layer_id)。属するトポロジー内では一意ですが、"
+"データベース内にまで広げると特定するのに十分ではありません。"
 
 #: ../../en/topology_topo_types.rst:127
 msgid ""
@@ -341,14 +419,19 @@ msgid ""
 "address an element, for example the key for any layer are two values "
 "[topology_id, layer_id]."
 msgstr ""
+"識別子はトポロジー内で機能するものですが、キーは要素を特定する完全な方法とな"
+"ります。たとえばレイヤーは [topology_id, layer_id] の二つの値をもってキーとし"
+"ます。"
 
 #: ../../en/topology_topo_types.rst:133
 msgid "The image is a good summary of how the keys for each are composed."
 msgstr ""
+"この画像はそれぞれのキーがどのように構成されているかがうまくまとまっています"
+"。"
 
 #: ../../en/topology_topo_types.rst:136
 msgid "Implicit identifiers on Keys"
-msgstr ""
+msgstr "キーの暗黙的な識別子"
 
 #: ../../en/topology_topo_types.rst:138
 msgid ""
@@ -356,26 +439,28 @@ msgid ""
 "TopoGeometries, this is because they have a context where you don't need to "
 "store the full Key to know it."
 msgstr ""
+"PostGIS は、レイヤーとトポジオメトリーを扱っている時に、ある程度暗黙的な手法"
+"を使います。完全なキーを格納しなくても特定できるためです。"
 
 #: ../../en/topology_topo_types.rst:140
 msgid "To show an example:"
-msgstr ""
+msgstr "例を示します:"
 
 #: ../../en/topology_topo_types.rst:142
 msgid "TopoGeometry is composed by:"
-msgstr ""
+msgstr "トポジオメトリーは次で構成されています:"
 
 #: ../../en/topology_topo_types.rst:144
 msgid "topology_id"
-msgstr ""
+msgstr "topology_id"
 
 #: ../../en/topology_topo_types.rst:145
 msgid "layer_id"
-msgstr ""
+msgstr "layer_id"
 
 #: ../../en/topology_topo_types.rst:146
 msgid "topogeometry_id"
-msgstr ""
+msgstr "topogeometry_id"
 
 #: ../../en/topology_topo_types.rst:148
 msgid ""
@@ -384,6 +469,9 @@ msgid ""
 "TopoElements, to make a reference in this context, do we need the "
 "topology_id?"
 msgstr ""
+"上述の通り、リレーションテーブルはトポロジースキーマ内に格納されています。こ"
+"のテーブルはトポジオメトリーとトポエレメントとのリレーションを持っています。"
+"このトポロジー内で参照するのに topology_id は必要でしょうか?"
 
 #: ../../en/topology_topo_types.rst:150
 msgid ""
@@ -392,10 +480,14 @@ msgid ""
 " its id on the table ``topology.topology``, which has all topologies ids and"
 " names."
 msgstr ""
+"ここは飛ばせます。トポロジースキーマ外では特定に識別子が必要ですが、"
+"トポロジースキーマ内では ``topology.topology`` テーブルでスキーマ名を見てその"
+"識別子を探索することができます。このテーブルに全てのトポロジー ID と"
+"トポロジー名があるためです。"
 
 #: ../../en/topology_topo_types.rst:153
 msgid "TopoGeometry"
-msgstr ""
+msgstr "トポジオメトリー"
 
 #: ../../en/topology_topo_types.rst:155
 msgid "TopoGeometry is a composite key with the next elements:"
@@ -419,7 +511,7 @@ msgstr ""
 
 #: ../../en/topology_topo_types.rst:163
 msgid "Basic Relation's table structure"
-msgstr ""
+msgstr "リレーションテーブルの基本構造"
 
 #: ../../en/topology_topo_types.rst:165
 msgid ""

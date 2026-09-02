@@ -5,12 +5,13 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # Weblate Translation Memory <noreply-mt-weblate-translation-memory@weblate.org>, 2024, 2025.
 # Teramoto Ikuhiro <yellow@affrc.go.jp>, 2024, 2025.
+# Teramoto Ikuhiro <teramoto.ikuhiro576@naro.go.jp>, 2026.
 msgid ""
-msgstr "Project-Id-Version: Introduction to PostGIS 1.1\nReport-Msgid-Bugs-To: \nPOT-Creation-Date: 2025-06-10 18:57+0000\nPO-Revision-Date: 2025-06-11 10:47+0000\nLast-Translator: Weblate Translation Memory <noreply-mt-weblate-translation-memory@weblate.org>\nLanguage-Team: Japanese <https://weblate.osgeo.org/projects/postgis-workshop/topology/ja/>\nLanguage: ja\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 5.4.3\nGenerated-By: Babel 2.8.0\n"
+msgstr "Project-Id-Version: Introduction to PostGIS 1.1\nReport-Msgid-Bugs-To: \nPOT-Creation-Date: 2025-06-10 18:57+0000\nPO-Revision-Date: 2026-09-01 08:39+0000\nLast-Translator: Teramoto Ikuhiro <teramoto.ikuhiro576@naro.go.jp>\nLanguage-Team: Japanese <https://weblate.osgeo.org/projects/postgis-workshop/topology/ja/>\nLanguage: ja\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Generator: Weblate 5.16.2\nGenerated-By: Babel 2.8.0\n"
 
 #: ../../en/topology.rst:4
 msgid "Topology"
-msgstr "トポロジ"
+msgstr "トポロジー"
 
 #: ../../en/topology.rst:6
 msgid "PostGIS supports the SQL/MM SQL-MM 3 Topo-Geo and Topo-Net 3 specifications via an extension called **postgis_topology**. You can learn about all the functions and types provided by this extension in `Manual: PostGIS Topology <https://postgis.net/docs/Topology.html>`_. The *postgis_topology* extension includes another kind of core spatial type, called a **topogeometry**. In addition to the *topogeometry* spatial type, you will find functions for building *topologies* and populating topologies."
@@ -146,7 +147,7 @@ msgstr "テーブルに投入する準備ができています。追加前にジ
 
 #: ../../en/topology.rst:140
 msgid "So lets start by adding valid ones.  The 1 used here refers to the layer_id generated from the previous query. If you don't know the layer id, you would look it up using the `FindLayer <https://postgis.net/docs/FindLayer.html>`_ function which we'll use in later examples."
-msgstr "では妥当なものを追加することろから始めましょう。ここで使われてる 1 は前のクエリで生成された layer_id を参照するものです。レイヤID が分からない場合には、後の例で使用する `FindLayer <https://postgis.net/docs/ja/FindLayer.html>`_ 関数を使って検索します。"
+msgstr "では妥当なものを追加することろから始めましょう。ここで使われてる 1 は前のクエリで生成された layer_id を参照するものです。レイヤ ID が分からない場合には、後の例で使用する `FindLayer <https://postgis.net/docs/ja/FindLayer.html>`_ 関数を使って検索します。"
 
 #: ../../en/topology.rst:144
 msgid "For these examples you'll use the function `toTopoGeom <https://postgis.net/docs/toTopoGeom.html>`_ function to convert a geometry to it's topogeometry equivalent.  toTopoGeom function handles a lot of book-keeping for you."

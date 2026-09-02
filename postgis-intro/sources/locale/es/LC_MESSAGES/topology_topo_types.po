@@ -8,24 +8,27 @@ msgstr ""
 "Project-Id-Version: Introduction to PostGIS 1.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-06-10 18:57+0000\n"
-"PO-Revision-Date: 2025-09-04 23:47+0000\n"
-"Last-Translator: Paulo Cesar Coronado <paulocoronado@udistrital.edu.co>\n"
-"Language-Team: Spanish <https://weblate.osgeo.org/projects/postgis-workshop/topology_topo_types/es/>\n"
+"PO-Revision-Date: 2026-08-11 11:39+0000\n"
+"Last-Translator: David Mateos <dmateos@users.noreply.weblate.osgeo.org>\n"
+"Language-Team: Spanish <https://weblate.osgeo.org/projects/postgis-workshop/"
+"topology_topo_types/es/>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.4.3\n"
+"X-Generator: Weblate 5.16.2\n"
 
 #: ../../en/topology_topo_types.rst:4
 msgid "Topology and Geometry Representation"
-msgstr ""
+msgstr "Representación de Topologías y Geometrías"
 
 #: ../../en/topology_topo_types.rst:6
 msgid ""
 "Before reading this document, please review at least one of these resources:"
 msgstr ""
+"Antes de leer este documento, por favor, revisa al menos uno de estos "
+"recursos:"
 
 #: ../../en/topology_topo_types.rst:8
 msgid ""
@@ -45,10 +48,13 @@ msgid ""
 "practical, we need a way to represent these elements in a table. Similar to "
 "how we have spatial tables, we can have topology tables."
 msgstr ""
+"Tener una Topología con todas sus Primitivas es útil, pero para que resulte "
+"más práctico, necesitamos una manera de representar estos elementos en una "
+"tabla. Similar a como tenemos tablas espaciales, tenemos tablas de topología."
 
 #: ../../en/topology_topo_types.rst:14
 msgid "Introduction to geometry representation"
-msgstr ""
+msgstr "Introducción a la representación de geometrías"
 
 #: ../../en/topology_topo_types.rst:16
 msgid ""

@@ -4,13 +4,14 @@
 # PostGIS package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
 # Teramoto Ikuhiro <yellow@affrc.go.jp>, 2023, 2024.
+# Teramoto Ikuhiro <teramoto.ikuhiro576@naro.go.jp>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Introduction to PostGIS 1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-07-28 11:17+0400\n"
-"PO-Revision-Date: 2024-02-27 02:45+0000\n"
-"Last-Translator: Teramoto Ikuhiro <yellow@affrc.go.jp>\n"
+"PO-Revision-Date: 2026-08-27 09:39+0000\n"
+"Last-Translator: Teramoto Ikuhiro <teramoto.ikuhiro576@naro.go.jp>\n"
 "Language-Team: Japanese <https://weblate.osgeo.org/projects/postgis-workshop/"
 "joins_advanced/ja/>\n"
 "Language: ja\n"
@@ -18,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.3\n"
+"X-Generator: Weblate 5.16.2\n"
 "Generated-By: Babel 2.9.1\n"
 
 #: ../../en/joins_advanced.rst:4
@@ -108,9 +109,9 @@ msgid ""
 "order to get census tracts, we need to summarize grouping on the first 11 "
 "characters of the ``blkid``."
 msgstr ""
-"前のセクションで見たように \"blkid\" キーの部分文字列で要約することで、国勢調"
+"前のセクションで見たように ``blkid`` キーの部分文字列で要約することで、国勢調"
 "査細分区から、より高いレベルのジオメトリを構築することができます。国勢統計区"
-"を取得するために、\"blkid\" の最初の11文字によってグループ化を要約する必要が"
+"を取得するために、``blkid`` の最初の11文字によってグループ化を要約する必要が"
 "あります。"
 
 #: ../../en/joins_advanced.rst:46
@@ -173,10 +174,10 @@ msgid ""
 "summary statistics for **both**."
 msgstr ""
 "興味深いクエリ (:ref:`interestingquestion` 内) の中で、地区ごとの集約をどの国"
-"勢調査統計区ポリゴンに含ませるかを決めるため"
-"に :command:`ST_Intersects(geometry_a, geometry_b)` 関数を使いました。次の質"
-"問に繋がります: 地区が二つの町の境界線上にある場合にはどうなりますか? 両方に"
-"インタセクトするため、**両方**の統計値に含んでしまいます。"
+"勢調査統計区ポリゴンに含ませるかを決めるために :command:`ST_Intersects"
+"(geometry_a, geometry_b)` 関数を使いました。次の質問に繋がります: 地区が二つ"
+"の町の境界線上にある場合にはどうなりますか? 両方にインタセクトするため、**両"
+"方** の統計値に含んでしまいます。"
 
 #: ../../en/joins_advanced.rst:135
 msgid "To avoid this kind of double counting there are two methods:"
@@ -187,8 +188,8 @@ msgid ""
 "The simple method is to ensure that each tract only falls in **one** summary "
 "area (using :command:`ST_PointOnSurface(geometry)`)"
 msgstr ""
-"単純な方法として、それぞれの統計区を**一つの**集約領域だけに収まるようにしま"
-"す (:command:`ST_PointOnSurface(geometry)` を使います)"
+"単純な方法として、それぞれの統計区を **一つの** 集約領域だけに収まるようにし"
+"ます (:command:`ST_PointOnSurface(geometry)` を使います)"
 
 #: ../../en/joins_advanced.rst:138
 msgid ""
